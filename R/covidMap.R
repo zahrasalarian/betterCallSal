@@ -1,14 +1,14 @@
-#' @title updateCovid
+#' @title covidMap
 #'
-#' @description Gets updated covid-19 data from Johns Hopkins University github
+#' @description Draws Map of daily covid-19 deaths or confirmed
 #'
 #'
-#' @return a dataframe of data
+#' @return a leaflet map
 #' @export
 #' @importFrom stats rnorm
 #'
 #' @examples
-#' updatedCovidData <- updateCovid()
+#' mapOfCovid <- covidMap()
 #'
 
 covidMap <-
