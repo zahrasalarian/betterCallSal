@@ -11,7 +11,7 @@
 #' mapOfCovid <- covidMap()
 #'
 
-covidMap <-
+drawCovidMap <-
   function(date,type)
   {
     date_temp <- unlist(strsplit(date,'-'))
