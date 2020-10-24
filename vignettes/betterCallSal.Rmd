@@ -1,0 +1,19 @@
+---
+title: "Gives all you wanna know from Covid-19"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Gets updated covid-19 data from Johns Hopkins University github}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(betterCallSal)
+```
