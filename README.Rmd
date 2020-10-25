@@ -28,6 +28,8 @@ You can install the released version of betterCallSal from [CRAN](https://CRAN.R
 ``` r
 install.packages("betterCallSal")
 ```
+## Website
+### You may want to first check the website and see how to get started: https://zahrasalarian.github.io/betterCallSal/
 
 And the development version from [GitHub](https://github.com/) with:
 
