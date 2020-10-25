@@ -1,5 +1,5 @@
 ---
-title: "Gives all you wanna know from Covid-19"
+title: "Gives all you want to know from Covid-19"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Gets updated covid-19 data from Johns Hopkins University github}
@@ -16,4 +16,41 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(betterCallSal)
+```
+## Want to get Covid-19's data from anyday you want easily?
+## Use "updateCovid" function
+### How to use it:
+###### This function gets a date in string type as input and throws a dataframe containing columns such as number of deaths, confirmed cases and etc in that day.
+###### The date format is like that: "mm-dd-yy"
+###### Don't forget that you should't pass dates when Covid-19 hadn't appeared yet
+###### an example:
+```{r updateCovid, warning=FALSE}
+data <- updateCovid("06-10-2020")
+View(data)
+```
+## Want to see world map of Covid-19's number of Deaths or confirmed cases?
+## Use "drawCovidMap" function
+### How to use it:
+###### This function gets date the type of information you want to know as input and throws a leaflet map of all countries and you can see how many deaths or confirmed cases where in each country or even state in that specific date
+###### The date format is like that: "mm-dd-yy" and the format of type should be either "Deaths" or "Confirmed".
+###### Again don't forget that you should't pass dates when Covid-19 hadn't appeared yet
+###### Examples:
+```{r drawCovidMap, warning=FALSE}
+deaths_map <- drawCovidMap("06-10-2020","Deaths")
+deaths_map
+confirmed_map <- drawCovidMap("06-10-2020","Confirmed")
+confirmed_map
+```
+## Want to draw the plot of the number of covid-19 deaths and confirmed cases during a time series in a specific country?
+## Use "drawCovidPlot" function
+### How to use it:
+###### This function gets a vector containing the start and end date of the time series and the name of a specific country as input and throws a ggplot barplot which it's y-axis is the number of deaths and confirmed cases in that especific country.
+###### The date format is like that: "mm-dd-yy" and the format of type should be either "Deaths" or "Confirmed".
+###### Again don't forget that you should't pass dates when Covid-19 hadn't appeared yet
+###### An example:
+```{r drawCovidPlot, warning=FALSE}
+deaths_plot_1 <- drawCovidPlot(c("05-13-2020","06-10-2020"),"US")
+deaths_plot_1
+confirmed_plot_2 <- drawCovidPlot(c("05-13-2020","10-01-2020"),"China")
+confirmed_plot_2
 ```
