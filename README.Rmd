@@ -1,0 +1,68 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# betterCallSal
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of betterCallSal is to make you aware of what Covid-19 is doing to the world
+
+## Installation
+
+You can install the released version of betterCallSal from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("betterCallSal")
+```
+
+And the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("zahrasalarian/betterCallSal")
+```
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(betterCallSal)
+# Wrong format
+period = c("5-6-2020","7-8-2020")
+country = "US"
+plot <- betterCallSal::drawCovidPlot(period,country)
+
+####
+# You Got error because your date format is not Correct
+# Correct format
+period = c("05-06-2020","07-08-2020")
+country = "US"
+plot <- betterCallSal::drawCovidPlot(period,country)
+```
+
+Lets see an example of global map
+
+```{r worldMap, warning=FALSE, error=FALSE}
+map <- betterCallSal::drawCovidMap("09-09-2020","Deaths")
+map
+```
+
+You can also embed plots, for example:
+
+```{r plot, echo = FALSE}
+p <- betterCallSal::drawCovidPlot(c("04-05-2020","06-05-2020"),"US")
+p
+```
