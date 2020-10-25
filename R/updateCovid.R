@@ -11,7 +11,7 @@
 #' @import RCurl
 #'
 #' @examples
-#' updatedCovidData <- updateCovid()
+#' updatedCovidData <- updateCovid("06-10-2020")
 #'
 
 updateCovid <-

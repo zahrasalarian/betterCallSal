@@ -3,7 +3,7 @@ Type: Package
 Title: Covid-19 World Statistics
 Version: 0.1.0
 Author: Zahra Salarian
-Maintainer: https://github.com/zahrasalarian
+Maintainer: Zahra Salarian <Zahra.Salarian@some.domain.net>
 Description: Gives updated Covid-19 data from Johns Hopkins University, draws global map and plot.
 License: GPL-3
 Encoding: UTF-8

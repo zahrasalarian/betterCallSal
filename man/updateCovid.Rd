@@ -16,6 +16,6 @@ a dataframe of data
 Gives updated covid-19 data from Johns Hopkins University's github
 }
 \examples{
-updatedCovidData <- updateCovid()
+updatedCovidData <- updateCovid("06-10-2020")
 
 }
