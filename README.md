@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+[![Travis build
+status](https://travis-ci.com/zahrasalarian/betterCallSal.svg?branch=master)](https://travis-ci.com/zahrasalarian/betterCallSal)
 <!-- badges: end -->
 
 The goal of betterCallSal is to make you aware of what Covid-19 is doing
