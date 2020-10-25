@@ -76,7 +76,7 @@ country = "US"
 plot <- betterCallSal::drawCovidPlot(period,country)
 ```
 
-Lets see an example of global map
+## Lets see an example of world map
 
 ``` r
 map <- betterCallSal::drawCovidMap("09-09-2020","Deaths")
@@ -90,6 +90,6 @@ map
 
 <img src="man/figures/README-worldMap-1.png" width="100%" />
 
-You can also embed plots, for example:
+## You can also embed plots, for example:
 
 <img src="man/figures/README-plot-1.png" width="100%" />
