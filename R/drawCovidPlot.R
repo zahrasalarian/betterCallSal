@@ -1,14 +1,20 @@
-#' @title covidMap
+#' @title drawCovidPlot
 #'
-#' @description Draws Map of daily covid-19 deaths or confirmed
+#' @description Draws the plot of the number of covid-19 deaths and confirmed cases during a time series in a specific country
 #'
+#' @param period a vector containing the start and end date of the time series
+#' @param country name of the chosen country
 #'
-#' @return a leaflet map
+#' @return a ggplot object
 #' @export
-#' @importFrom stats rnorm
+#' @import dplyr
+#' @import GetoptLong
+#' @import tidyverse
+#' @import reshape
+#' @import ggplot2
 #'
 #' @examples
-#' mapOfCovid <- covidMap()
+#' plotOfCovid <- drawCovidPlot(c("04-02-2020","06-12-2020"),"US")
 #'
 
 drawCovidPlot <-
@@ -31,9 +37,8 @@ drawCovidPlot <-
     confirmed_data[1]<- NULL
 
     #filter by country
-    #country = "China"
     deaths_data<- deaths_data%>%
-      filter(Country == country)%>%
+    dplyr::filter(Country == country)%>%
       group_by(Country)%>%
       summarise_each(list(sum))
 
@@ -42,7 +47,6 @@ drawCovidPlot <-
       group_by(Country)%>%
       summarise_each(list(sum))
 
-    #period = c("03-03-2020","03-05-2020")
     a <- unlist(strsplit(period[1],'-'))
     a[3] <- paste(unlist(strsplit(a[3],""))[-1:-2], collapse = "")
     a<- qq("X@{as.integer(a[1])}.@{as.integer(a[2])}.@{as.integer(a[3])}")
@@ -53,7 +57,7 @@ drawCovidPlot <-
     a_deaths <-grep(a, colnames(deaths_data))
     b_deaths <-grep(b, colnames(deaths_data))
     deaths_data<- deaths_data[a_deaths:b_deaths]
-    #deaths_data$type <- "deaths"
+
     a_confirmed <- grep(a, colnames(confirmed_data))
     b_confirmed <- grep(b, colnames(confirmed_data))
     confirmed_data<- confirmed_data[a_confirmed:b_confirmed]
@@ -71,6 +75,7 @@ drawCovidPlot <-
     confirmed_data$type <- "confirmed"
     confirmed_data$seq <- seq.int(nrow(confirmed_data))
 
+    #combine
     full_data <- rbind(confirmed_data,deaths_data)
 
     p<- ggplot(data=full_data, aes(x=date, y=value, fill=type, color=type, alpha=type)) +

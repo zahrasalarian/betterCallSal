@@ -4,13 +4,16 @@
 \alias{updateCovid}
 \title{updateCovid}
 \usage{
-updateCovid()
+updateCovid(date)
+}
+\arguments{
+\item{date}{the date to which you want to update your data}
 }
 \value{
 a dataframe of data
 }
 \description{
-Gets updated covid-19 data from Johns Hopkins University github
+Gives updated covid-19 data from Johns Hopkins University's github
 }
 \examples{
 updatedCovidData <- updateCovid()
