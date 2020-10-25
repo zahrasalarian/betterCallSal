@@ -2,7 +2,7 @@
 title: "Gives all you want to know from Covid-19"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Gets updated covid-19 data from Johns Hopkins University github}
+  %\VignetteIndexEntry{Gives all you want to know from Covid-19}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
