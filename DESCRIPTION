@@ -7,6 +7,16 @@ Maintainer: Zahra Salarian <Zahra.Salarian@some.domain.net>
 Description: Gives updated Covid-19 data from Johns Hopkins University, draws global map and plot.
 License: GPL-3
 Encoding: UTF-8
+Imports:
+	GetoptLong,
+	readr,
+	RCurl,
+	dplyr,
+	tidyverse,
+	reshape,
+	ggplot2,
+	leaflet,
+	viridisLite
 LazyData: true
 URL: https://github.com/zahrasalarian/betterCallSal
 BugReports: https://github.com/zahrasalarian/betterCallSal/issues
