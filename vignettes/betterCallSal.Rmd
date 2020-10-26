@@ -26,7 +26,7 @@ library(betterCallSal)
 ###### an example:
 ```{r updateCovid, warning=FALSE}
 data <- updateCovid("06-10-2020")
-View(data)
+#View(data)
 ```
 ## Want to see world map of Covid-19's number of Deaths or confirmed cases?
 ## Use "drawCovidMap" function
