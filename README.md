@@ -14,6 +14,8 @@ to the world
 
 ## Installation
 
+#### You need to have R version 4.0.2
+
 You can install the released version of betterCallSal from
 [CRAN](https://CRAN.R-project.org) with:
 
@@ -50,6 +52,7 @@ plot <- betterCallSal::drawCovidPlot(period,country)
 #> The following objects are masked from 'package:base':
 #> 
 #>     intersect, setdiff, setequal, union
+#> Warning: package 'GetoptLong' was built under R version 4.0.3
 #> -- Attaching packages -------------------- tidyverse 1.3.0 --
 #> v ggplot2 3.3.2     v purrr   0.3.4
 #> v tibble  3.0.3     v stringr 1.4.0

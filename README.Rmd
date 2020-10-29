@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 The goal of betterCallSal is to make you aware of what Covid-19 is doing to the world
 
 ## Installation
-
+#### You need to have R version 4.0.2
 You can install the released version of betterCallSal from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
